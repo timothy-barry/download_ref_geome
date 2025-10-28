@@ -6,6 +6,13 @@
 #SBATCH --mem=4G
 #SBATCH --partition short
 
-source ~/.research_config
-dest_fp=$REF_GENOME_DIR"/hg38_primary.fa.gz"
-wget -O $dest_fp https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/GRCh38.primary_assembly.genome.fa.gz
+# download the reference genomes
+#source ~/.research_config
+#dest_fp=$REF_GENOME_DIR"/hg38_primary.fa.gz"
+#wget -O $dest_fp https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/GRCh38.primary_assembly.genome.fa.gz
+gzip -d $dest_fp
+
+# download the annotation file
+dest_fp=$REF_GENOME_DIR"/primary_annotation.gtf.gz"
+wget -O $dest_fp https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.primary_assembly.annotation.gtf.gz
+gzip -d $dest_fp
