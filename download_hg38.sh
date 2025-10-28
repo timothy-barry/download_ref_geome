@@ -20,8 +20,8 @@ source ~/.research_config
 #gzip -d $annotation_dest_fp
 
 # active guideseq venv; remove scaffolds, etc
-#conda init
-#conda activate GENETHOFF
+conda init
+conda activate GENETHOFF
 #ref_genome_dest_fp_uncompressed=$REF_GENOME_DIR"/hg38_primary.fa"
 ref_genome_new_name=$REF_GENOME_DIR"/hg38_main_chroms.fa"
 #sed -E 's/^(>chr[0-9XYM]+) .*/\1/' "$ref_genome_dest_fp_uncompressed" | \
