@@ -7,6 +7,7 @@
 #SBATCH -c 4
 #SBATCH --partition short
 
+module load conda/miniforge3/24.11.3-0
 source ~/.research_config
 
 # download the reference genomes
