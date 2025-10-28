@@ -7,15 +7,16 @@
 #SBATCH --partition short
 
 source ~/.research_config
+
 # download the reference genomes
 ref_genome_dest_fp=$REF_GENOME_DIR"/hg38_primary.fa.gz"
 wget -O $ref_genome_dest_fp https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/GRCh38.primary_assembly.genome.fa.gz
 gzip -d $ref_genome_dest_fp
 
 # download the annotation file
-annotation_dest_fp=$REF_GENOME_DIR"/primary_annotation.gtf.gz"
-wget -O $annotation_dest_fp https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.primary_assembly.annotation.gtf.gz
-gzip -d $annotation_dest_fp
+#annotation_dest_fp=$REF_GENOME_DIR"/primary_annotation.gtf.gz"
+#wget -O $annotation_dest_fp https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.primary_assembly.annotation.gtf.gz
+#gzip -d $annotation_dest_fp
 
 # active guideseq venv; remove scaffolds, etc
 conda activate GENETHOFF
