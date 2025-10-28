@@ -33,4 +33,4 @@ ref_genome_new_name=$REF_GENOME_DIR"/hg38_main_chroms.fa"
 
 # build the bowtie index
 index_prefix=$REF_GENOME_DIR"/hg38_main_chroms"
-bowtie2-build -@ 4 $ref_genome_new_name $index_prefix
+bowtie2-build --threads 4 $ref_genome_new_name $index_prefix
